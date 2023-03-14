@@ -39,10 +39,23 @@ createApp({
         }
     },
 
-
     methods: {
 
+        slideDopo() {
+            if (this.slideAttiva < this.slides.length -1) {
+                this.slideAttiva++;
+            } else {
+                this.slideAttiva = 0;
+            }
+        },
 
+        slidePrima() {
+            if (this.slideAttiva == 0) {
+                this.slideAttiva = this.slides.length - 1;
+            } else {
+                this.slideAttiva--;
+            }
+        }
     }
 
 }).mount('#app')
