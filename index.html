@@ -27,10 +27,10 @@
                 <div class="thumbs">
                     <div @click="slidePrima()" class="prev"></div>
                     <div @click="slideDopo()" class="next"></div>
-                    <div v-for: class="thumb active">
-                        <img src="img/01.webp" alt="Svezia" />
+                    <div v-for="(slide, index) in slides" class="thumb" :class=" index == slideAttiva ? 'active' : '' ">
+                        <img :src="slide.image" alt="minature" />
                     </div>
-                    <div class="thumb">
+                    <!-- <div class="thumb">
                         <img src="img/02.webp" alt="Ratchet & Clank" />
                     </div>
                     <div class="thumb">
@@ -41,7 +41,7 @@
                     </div>
                     <div class="thumb">
                         <img src="img/05.webp" alt="Avengers" />
-                    </div>
+                    </div> -->
                 </div>
 
             </div>
